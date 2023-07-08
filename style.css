@@ -1,0 +1,87 @@
+*{
+    padding: 0;/*Padding refers to the space between the content of an element and its border.*/
+    margin: 0;/*Margin refers to the space outside the borders of an element.*/
+    font-family:Georgia, 'Times New Roman', Times, serif;/*browser will attempt to render the 
+    text using the "Georgia" font first. If "Georgia" is not available on the user's system, 
+    it will fall back to "Times New Roman" and so on...*/
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+}
+.card{
+    width:90%;
+    max-width: 470px;/*the amount of screen space at max, a card would occupy*/
+    background: linear-gradient(135deg,rgb(144, 238, 222),rgb(0, 74, 139));/* #00feba, #5b548a,*/
+    color: #fff;/*font color inside the card*/
+    margin: 100px auto 0;
+    border-radius: 20px;/*making a box blunt at it's edges*/
+    padding: 40px 35px;
+    text-align:center;
+}
+.search{
+    width: 100%;
+    display: flex;/* could be for displaying in same row*/ 
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height : 60px;
+    cursor: pointer;/* cursor changes to pointer as soon as you put your mouse on the
+    img src of search button*/
+}
+.search button img{
+    width:40px;
+}
+.weather-icon{
+    width:170px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{/* for displaying text of humidity and wind speed beside images*/
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{/* reducing img size for wind and humidity icons*/
+    width:40px;
+    margin-right: 10px;
+}
+.weather{/* to not show data unless asked for*/
+    display: none;
+}
+.error{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 10px;
+    margin-top: 10px;
+    display:none;/*hide it unless needed*/
+}
